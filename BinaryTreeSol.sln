@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTrees", "BinaryTrees\BinaryTrees.csproj", "{1BFF3898-C427-4332-B4FC-C96FAE156BBC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BinaryTree.Tests", "BinaryTree.Tests\BinaryTree.Tests.csproj", "{EDAA699B-32CF-4D91-8F2F-A5DF1BEC8FAA}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1BFF3898-C427-4332-B4FC-C96FAE156BBC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1BFF3898-C427-4332-B4FC-C96FAE156BBC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1BFF3898-C427-4332-B4FC-C96FAE156BBC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1BFF3898-C427-4332-B4FC-C96FAE156BBC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDAA699B-32CF-4D91-8F2F-A5DF1BEC8FAA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDAA699B-32CF-4D91-8F2F-A5DF1BEC8FAA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDAA699B-32CF-4D91-8F2F-A5DF1BEC8FAA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDAA699B-32CF-4D91-8F2F-A5DF1BEC8FAA}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
