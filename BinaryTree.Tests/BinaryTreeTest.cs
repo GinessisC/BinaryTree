@@ -19,19 +19,6 @@ public class BinaryTreeTest
 	}
 
 	[Fact]
-	public void Create_BSTWithDuplicateNodes_ThrowsException()
-	{
-		List<int> elements =
-		[
-			1,
-			2,
-			2
-		];
-
-		Assert.Throws<ArgumentException>(() => new BinaryTree<int>(elements));
-	}
-
-	[Fact]
 	public void Add_Node_ReturnsBalancedBST()
 	{
 		BinaryTree<int> bt = new([1, 2, 3, 4]);

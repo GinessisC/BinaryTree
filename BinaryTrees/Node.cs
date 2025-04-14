@@ -25,7 +25,8 @@ public class Node<T>
 
 	public virtual int Depth => GetDepth(this);
 
-	public virtual int Key => Value!.GetHashCode(); // ! is used bc we cant call .Key before constructor initialize Value
+	public virtual int Key =>
+		Value!.GetHashCode(); // ! is used bc we cant call .Key before constructor initialize Value
 
 	public Node(T value,
 		Node<T>? left = null,

@@ -6,15 +6,10 @@ public class BinaryTree<T> where T : IComparable<T>
 	public int Count => Root.Count;
 	public int Depth => Root.Depth;
 
-	public BinaryTree(IList<T> elements)
+	public BinaryTree(HashSet<T> elements)
 	{
-		if (elements.HaveNoDuplicate() is false)
-		{
-			throw new ArgumentException("There are duplicate elements. Failed to construct bst.");
-		}
-
-		elements = elements.OrderBy(e => e).ToList();
-		Root = ConstructBst(elements, 0, elements.Count - 1);
+		List<T> orderedElements = elements.OrderBy(e => e).ToList();
+		Root = ConstructBst(orderedElements, 0, elements.Count - 1);
 	}
 
 	public void Balance()
@@ -45,6 +40,22 @@ public class BinaryTree<T> where T : IComparable<T>
 		int rightHeight = Root.Right?.Depth ?? 0;
 
 		return Math.Abs(leftHeight - rightHeight) <= 1;
+	}
+
+	public void Add(T value,
+		int valueKey,
+		Node<T>? currentNode = null)
+	{
+		currentNode ??= Root;
+
+		if (valueKey < currentNode.Key)
+		{
+			AddToLeftChild(currentNode, value, valueKey);
+		}
+		else if (valueKey > currentNode.Key)
+		{
+			AddToRightChild(currentNode, value, valueKey);
+		}
 	}
 
 	private Node<T> ConstructBst(IList<T> elements,
@@ -81,22 +92,6 @@ public class BinaryTree<T> where T : IComparable<T>
 		GetNodeValuesInOrder(node.Right, values);
 
 		return values;
-	}
-
-	public void Add(T value,
-		int valueKey,
-		Node<T>? currentNode = null)
-	{
-		currentNode ??= Root;
-
-		if (valueKey < currentNode.Key)
-		{
-			AddToLeftChild(currentNode, value, valueKey);
-		}
-		else if (valueKey > currentNode.Key)
-		{
-			AddToRightChild(currentNode, value, valueKey);
-		}
 	}
 
 	private void AddToRightChild(Node<T> node,
